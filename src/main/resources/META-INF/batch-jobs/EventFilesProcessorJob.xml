@@ -3,9 +3,9 @@
      xmlns="http://xmlns.jcp.org/xml/ns/javaee"
      version="1.0">
     <properties>
-        <property name="upload_directory" value="/tmp/uploads"/>
-        <property name="archive_directory" value="/tmp/archive"/>
-        <property name="failed_directory" value="/tmp/failed"/>
+        <property name="upload_directory" value="C:\\tmp\\uploads"/>
+        <property name="archive_directory" value="C:\\tmp\\archive"/>
+        <property name="failed_directory" value="C:\\tmp\\failed"/>
     </properties>
     <listeners>
         <listener ref="FileProcessorJobListener"/>

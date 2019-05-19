@@ -2,6 +2,10 @@
                               Cargo Tracker
             Applied Domain-Driven Design Blue Prints for Java EE
 ================================================================================
+Configuration change
+========
+For windows configuration I changed '/tmp' directory to 'C:\\temp'. If '/tmp'
+is mentioned You have to read this as 'C:\\temp'
 
 Overview
 ========
