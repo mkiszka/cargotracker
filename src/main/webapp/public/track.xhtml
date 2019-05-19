@@ -14,7 +14,12 @@
                         <br/>
                         <h:form id="trackingForm">
                             <p:outputLabel value="Tracking ID  " />
-                            <p:autoComplete id="trackingId" value="#{track.trackingId}" required="true" forceSelection="true" completeMethod="#{track.getTrackingIds}" />
+                            <p:selectOneMenu id="trackingId" value="#{track.trackingId}" required="true" forceSelection="true">
+                                <f:selectItem itemLabel="Select cargo" itemValue="" noSelectionOption="true" />
+                                <f:selectItems value="#{track.trackingIds}" />
+                            </p:selectOneMenu>
+                            <p:autoComplete id="trackIdInput" value="#{track.trackingId}" required="true" forceSelection="true" completeMethod="#{track.getTrackingIds()}" />
+
                             <p:commandButton value="Track!" actionListener="#{track.onTrackById}" ajax="false"/>
                         </h:form>
                         <br/>

@@ -26,6 +26,7 @@ import net.java.cargotracker.domain.model.handling.HandlingEventRepository;
  * <p/>
  * In some very simplistic cases, it is fine to not use even an adapter.
  */
+//@Named("tracker")
 @Named
 @ViewScoped
 public class Track implements Serializable {
@@ -38,6 +39,7 @@ public class Track implements Serializable {
     private HandlingEventRepository handlingEventRepository;
 
     private String trackingId;
+
     private CargoTrackingViewAdapter cargo;
 
     public String getTrackingId() {
@@ -61,6 +63,9 @@ public class Track implements Serializable {
         this.cargo = cargo;
     }
 
+    public List<TrackingId> getTrackingIds() {
+        return cargoRepository.getAllTrackingIds();
+    }
     /**
      * @param query The query parameter is required by PrimeFaces but we don't 
      * use it.
